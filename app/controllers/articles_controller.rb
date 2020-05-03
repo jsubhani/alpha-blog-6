@@ -1,9 +1,13 @@
 class ArticlesController < ApplicationController
+<<<<<<< HEAD
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :require_user, except: [:show, :index]
   before_action :require_same_user, only: [:edit, :update, :destroy]
+=======
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 
   def show
+    @article = Article.find(params[:id])
   end
 
   def index
@@ -15,18 +19,29 @@ class ArticlesController < ApplicationController
   end
 
   def edit
+    @article = Article.find(params[:id])
   end
 
   def create
     @article = Article.new(params.require(:article).permit(:title, :description))
+<<<<<<< HEAD
     @article.save
     redirect_to @article
 
 
+=======
+    if @article.save
+      flash[:notice] = "Article was created successfully."
+      redirect_to @article
+    else
+      render 'new'
+    end
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
   end
 
   def update
-    if @article.update(article_params)
+    @article = Article.find(params[:id])
+    if @article.update(params.require(:article).permit(:title, :description))
       flash[:notice] = "Article was updated successfully."
       redirect_to @article
     else
@@ -35,10 +50,12 @@ class ArticlesController < ApplicationController
   end
 
   def destroy
+    @article = Article.find(params[:id])
     @article.destroy
     redirect_to articles_path
   end
 
+<<<<<<< HEAD
   private
 
   def set_article
@@ -56,4 +73,6 @@ class ArticlesController < ApplicationController
     end
   end
 
+=======
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 end

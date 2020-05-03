@@ -9,6 +9,7 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+<<<<<<< HEAD
 
   <body class="d-flex flex-column">
     <%= render 'layouts/navigation' %>
@@ -19,4 +20,12 @@
     <%= render 'layouts/footer' %>
 </body>
 
+=======
+  <body>
+    <% flash.each do |name, msg| %>
+      <%= msg %>
+    <% end %>  
+    <%= yield %>
+  </body>
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 </html>
