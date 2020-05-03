@@ -18,20 +18,11 @@ class ArticlesController < ApplicationController
   end
 
   def create
-<<<<<<< HEAD
-    @article = Article.new(article_params)
-    @article.user = current_user
-    if @article.save
-      flash[:notice] = "Article was created successfully."
-      redirect_to @article
-    else
-      render 'new'
-    end
-=======
     @article = Article.new(params.require(:article).permit(:title, :description))
     @article.save
     redirect_to @article
->>>>>>> parent of 8336092... Add validation error messages display and flash messaging
+
+
   end
 
   def update
