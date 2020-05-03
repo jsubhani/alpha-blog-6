@@ -1,9 +1,12 @@
 class ArticlesController < ApplicationController
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   before_action :set_article, only: [:show, :edit, :update, :destroy]
   before_action :require_user, except: [:show, :index]
   before_action :require_same_user, only: [:edit, :update, :destroy]
+=======
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 =======
 >>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 =======
@@ -29,11 +32,14 @@ class ArticlesController < ApplicationController
     @article = Article.new(params.require(:article).permit(:title, :description))
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     @article.save
     redirect_to @article
 
 
 =======
+=======
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 =======
 >>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
     if @article.save
@@ -63,6 +69,7 @@ class ArticlesController < ApplicationController
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   private
 
   def set_article
@@ -80,6 +87,8 @@ class ArticlesController < ApplicationController
     end
   end
 
+=======
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 =======
 >>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 =======
