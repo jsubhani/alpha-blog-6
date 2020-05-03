@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Resource
 - Users - create users table and model
         - add validations
@@ -23,3 +24,11 @@ Security
 
 
 
+=======
+The front-end: Creating articles 
+
+- Route
+- Controller#action
+- Model/db table
+- View
+>>>>>>> parent of 8336092... Add validation error messages display and flash messaging
