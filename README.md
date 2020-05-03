@@ -2,6 +2,7 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 Resource
 - Users - create users table and model
         - add validations
@@ -35,6 +36,11 @@ The front-end: Creating articles
 - Model/db table
 - View
 >>>>>>> parent of 8336092... Add validation error messages display and flash messaging
+=======
+The front-end: Layout links
+
+- Add layout links
+>>>>>>> parent of b36fdad... Refactor code using partials and make app production ready
 =======
 The front-end: Layout links
 
