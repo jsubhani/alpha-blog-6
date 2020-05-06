@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-10">
@@ -9,14 +10,25 @@
             <%= f.text_field :title, class: "form-control shadow rounded", placeholder: "Title of article" %>
           </div>
         </div>
+=======
+<% if @article.errors.any? %>
+  <h2>The following errors prevented the article from being saved</h2>
+  <ul>
+    <% @article.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
 
-        <div class="form-group row">
-          <%= f.label :description, class: "col-2 col-form-label text-light" %>
-          <div class="col-10"> 
-            <%= f.text_area :description, rows: 10, class: "form-control shadow rounded", placeholder: "Description of article" %>
-          </div>
-        </div>
+<%= form_with(model: @article, local: true) do |f| %>
+>>>>>>> parent of 49bb833... Add form styling for new and edit
 
+  <p>
+    <%= f.label :title %><br/>
+    <%= f.text_field :title %>
+  </p>
+
+<<<<<<< HEAD
         <div class="form-group row justify-content-center">
           <%= f.submit class: "btn btn-outline-light btn-lg" %>
         </div>
@@ -27,3 +39,15 @@
     </div>
   </div>
 </div>
+=======
+  <p>
+    <%= f.label :description %><br/>
+    <%= f.text_area :description %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>
+>>>>>>> parent of 49bb833... Add form styling for new and edit
