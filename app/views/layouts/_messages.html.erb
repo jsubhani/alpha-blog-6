@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <div class="container">
   <% flash.each do |name, msg| %>
     <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alert-dismissible fade show" role="alert">
@@ -8,3 +9,8 @@
     </div>
   <% end %> 
 </div>
+=======
+<% flash.each do |name, msg| %>
+  <%= msg %>
+<% end %> 
+>>>>>>> parent of 0cc39c1... Style validation and flash messages
